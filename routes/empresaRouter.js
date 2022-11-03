@@ -1,8 +1,9 @@
 var express = require("express");
 var empresaRouter = express.Router();
+const gestorController = require("../controllers/gestorController");
 
   // empresaRouter.get('/registerEmpresa', userC.registerEmpresaControllers)
-  empresaRouter.post('/registerEmpresa', empresa.registerEmpresaControllers)
+  empresaRouter.post('/registerEmpresa', gestorController.registerEmpresaControllers)
   /*
 userRouter.post('/login')
 userRouter.post('/profile')

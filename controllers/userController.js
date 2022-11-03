@@ -64,4 +64,4 @@ class userController {
 
 }
 
-module.exports = PublisherController;
+module.exports = userController;

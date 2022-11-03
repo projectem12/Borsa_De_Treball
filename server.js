@@ -2,15 +2,11 @@ var express = require('express');
 var path = require('path');
 var dotenv = require('dotenv'); // Per a insertar el fitxer '.env' amb totes les variables (**)
 
-var indexRouter = require('./routes/indexRouter');
-var genresRouter = require('./routes/genresRouter');
-var publisherRouter = require('./routes/publisherRouter');
-<<<<<<< HEAD
-var booksRouter = require('./routes/booksRouter');
-=======
-var technicalBookRouter = require('./routes/technicalBookRouter');
+var borsaRouter = require('./routes/borsaRouter');
+var empresaRouter = require('./routes/empresaRouter');
+var userRouter = require('./routes/user.routes');
 
->>>>>>> c7e4ba2bf9c5bb924fe3a67b50beb6eda1ba3862
+
 
 var app = express();
 
@@ -40,17 +36,11 @@ const server = app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
-<<<<<<< HEAD
-// Per a poder utilitzar el sistema de rutes
-app.use('/', indexRouter);              // Qualssevol ruta amb la barra '/' anirà al fitxer 'indexRouter'
-app.use('/genres', genresRouter);       // Qualssevol ruta amb la barra '/genres' anirà al fitxer 'genresRouter'
-app.use('/publisher', publisherRouter); // Qualssevol ruta amb la barra '/publisher' anirà al fitxer 'publisherRouter'
-app.use('/books', booksRouter);         // Qualssevol ruta amb la barra '/books' anirà al fitxer 'bookRouter'
-=======
-app.use('/home', indexRouter);
-app.use('/genres', genresRouter);
-app.use('/publisher', publisherRouter);
-app.use('/technicalbook', technicalBookRouter);
->>>>>>> c7e4ba2bf9c5bb924fe3a67b50beb6eda1ba3862
+
+app.use('/home', borsaRouter );
+app.use('/genres',empresaRouter);
+app.use('/publisher', userRouter);
+
+
 
 module.exports = app;

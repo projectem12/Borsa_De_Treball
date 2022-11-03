@@ -1,10 +1,11 @@
 var express = require("express");
-var userRouter = express.Router();
+var empresaRouter = express.Router();
+const ofertaController = require("../controllers/ofertaController");
 
 userRouter.get('/', (req, res)=>{
  
 })
-userRouter.post('/registerOferta', gestor.ofertaRegisterController) 
+userRouter.post('/registerOferta', ofertaController.ofertaRegisterController) 
 userRouter.post('/profile')
 userRouter.patch('/update-data')  
 userRouter.patch('/update-email')
