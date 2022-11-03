@@ -1,10 +1,36 @@
-# Borsa De Treball
-Projecte borsa de treball per l'institut vidal i barraquer.
+
+<div align="center">
+  <h1>APP-WEB BORSA DE TREBALL</h1>
+  <p>
+    Aplicacion bolsa de trabajo para el instituo vidal i barraquer || <b>Proyecto final M12 DAW</b>.
+    <br />
+    <br />
+    <br />
+    <br />
+  </p>
+
+</div>
+
+<!-- BUILT WITH -->
+
+## About The Project
+
+El objetivo de este proyecto es crear una bolsa de trabajo completamente funcional para los alumnos y exalumnos del centro. 
+
+<!-- BUILT WITH -->
+
+## Built With
+
+Usaremos las siguientes herramientas para construir un backend y frontend escalables. 
+
+-   NodeJS
+-   MongoDB
+-   React
 
 
-- [Primera versió: Gestió de Genres](https://github.com/rcervera/M12-BookCatalog/tree/5fffcdb0fb00d200797e3efef9b1e46363b52d84)
 
-- [Segona versió: Gestió de Publishers](https://github.com/rcervera/M12-BookCatalog/tree/5735c05dc25907314d30b39d2014eb163f4cb20b)
 
-- [Tercera versió: Gestió de TechnicalBooks: Alta](https://github.com/rcervera/M12-BookCatalog)
+
+- [Primera versió: Borsa Treball](https://github.com/Suau17/app_web_borsa_treball/tree/test)
+
 
