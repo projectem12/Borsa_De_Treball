@@ -1,4 +1,6 @@
-var Genre = require("../models/ofertaLaboral");
+var GestorModel = require("../models/gestor");
+var OfertaLaboral = require("../models/ofertaLaboral");
+var User = require("../models/User");
 
 class ofertaController {
 

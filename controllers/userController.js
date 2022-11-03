@@ -1,11 +1,13 @@
-var Publisher = require("../models/publisher");
+var GestorModel = require("../models/gestor");
+var OfertaLaboral = require("../models/ofertaLaboral");
+var UserModel = require("../models/User");
 
 class userController {
 
     static userRegistrerController = async (req, res) => {
         const { _id, name, description, email, passwordHash, rolUser } = req.body
     
-        const exsistingUserByEmail = await UserModel.findById(email).exec()
+        const exsistingUserByEmail = await UserModel.findOne({email : email})
     
         if (exsistingUserByEmail) return res.status(499).send('ya exsiste un usuario con ese email registrado')
         // cogemos la variable que viene del req.body y la encriptamos
@@ -48,14 +50,15 @@ class userController {
                 return next(err)
             }
             // en la view saldara una var con json list_users
-           // res.send({ listaUsuarios: list_users })
+            console.log(UserModel)
+           res.send({ listaUsuarios : list_users })
           
            
                 // 'await' espera a que trobi les dades de Genere. Amb 'await' es obligat posar 'async' a la
                 // definició del mètode. El 'await' sempre ha d'estar entre un 'try-catch'
                 
                 // error path join
-             res.render('usersView/list',{listaUsuarios: list_users})   
+          //   res.render('usersView/list',{listaUsuarios: list_users})   
               
             
         })

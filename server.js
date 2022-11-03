@@ -17,7 +17,7 @@ const port = process.env.PORT || 8000;  // Ja es pot accedir a les variables de 
 
 // Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = process.env.MONGODB_URI;
+var mongoDB = process.env.MONGODB_URL;
 
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 //mongoose.Promise = global.Promise;
@@ -31,7 +31,6 @@ app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname + '/public')));
-
 const server = app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
@@ -39,7 +38,7 @@ const server = app.listen(port, () => {
 
 app.use('/home', borsaRouter );
 app.use('/genres',empresaRouter);
-app.use('/publisher', userRouter);
+app.use('/router', userRouter);
 
 
 

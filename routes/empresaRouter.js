@@ -12,4 +12,4 @@ userRouter.patch('/crear-oferta')
 userRouter.del('/del-oferta') */
 
 
-module.exports = router;
+module.exports = empresaRouter;

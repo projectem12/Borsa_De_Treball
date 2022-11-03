@@ -1,6 +1,6 @@
 var GestorModel = require("../models/gestor");
-var Publisher = require("../models/ofertaLaboral");
-var Genre = require("../models/User");
+var OfertaLaboral = require("../models/ofertaLaboral");
+var User = require("../models/User");
 
 class gestorController {
 
