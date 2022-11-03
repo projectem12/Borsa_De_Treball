@@ -1,6 +1,6 @@
 var mongoose = require("mongoose"); // Diem que utilitzem el paquet 'mongoose'
 
-var Schema = mongoose.Schema; // Diem que utilitzarem esquemes per a les collecions de MongoDB
+var Schema = mongoose.Schema;// Diem que utilitzarem esquemes per a les collecions de MongoDB
 
 const alumnoSchema = new Schema({
     dni : { type: 'string', required: true, minLenght: 9,  maxLength: 9},    
