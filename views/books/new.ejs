@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+
+	<div class="card mt-4">
+	  <div class="card-header">
+	     <h5 class="card-title">New Book</h5>
+	  </div>
+	  <div class="card-body">
+
+	   	<form method="POST" action="/books/create">
+			<div class="form-group">
+				<label for="title">Title</label>
+				<input type="text" name="title" class="form-control"><br>
+
+				<div class="form-group">
+					<label for="publisher">Publisher</label>
+					<select name="publisher" class="form-control">
+						<% list_publisher.forEach( function(publisher) { %>
+							<option value="<%= publisher._id %>"><%= publisher.name %></option>
+						<% }); %>
+					</select>
+				</div>
+
+				<label for="summary">Summary</label><br>
+				<textarea name="summary" cols="60" rows="5"></textarea><br><br>
+
+				<label for="isbn">ISBN</label>
+				<input type="text" name="isbn" class="form-control"><br><br>
+
+				<label>Author 1</label><br>
+				<label for="author[0][firstname]">1. First Name</label>
+				<input type="text" name="author[0][firstname]" class="form-control">
+				<label for="author[0][lastname]">2. Last Name</label>
+				<input type="text" name="author[0][lastname]" class="form-control"><br>
+				
+				<label>Author 2</label><br>
+				<label for="author[1][firstname]">1. First Name</label>
+				<input type="text" name="author[1][firstname]" class="form-control">
+				<label for="author[1][lastname]">2. Last Name</label>
+				<input type="text" name="author[1][lastname]" class="form-control"><br>
+
+				<label>Author 3</label><br>
+				<label for="author[2][firstname]">1. First Name</label>
+				<input type="text" name="author[2][firstname]" class="form-control">
+				<label for="author[2][lastname]">2. Last Name</label>
+				<input type="text" name="author[2][lastname]" class="form-control"><br>
+				
+				<label for="genre">Genre</label><br>
+				<% list_genre.forEach( function(genre) { %>
+					<input type="checkbox" name="genre" value="<%= genre._id %>"><%= genre.name %><br>
+				<% }); %> 
+
+			</div>
+			<button type="submit" class="btn btn-primary">Save
+			</button>
+		</form>
+
+		<% if (typeof error !== "undefined") { %>
+			<div class="alert alert-primary mt-2" role="alert">   <p><%= error %></p>
+			</div>
+		<% } %>
+
+	  </div>
+	</div>
+	
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
