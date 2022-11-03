@@ -1,4 +1,4 @@
-var Publisher = require("../models/publisher");
+var user= require("../models/User");
 
 class userController {
 
@@ -64,4 +64,4 @@ class userController {
 
 }
 
-module.exports = PublisherController;
+module.exports = userController;
