@@ -1,4 +1,4 @@
-var Genre = require("../models/genre");
+var oferta = require("../models/oferta");
 
 class ofertaController {
    static ofertaRegisterController = async (req, res) => {
@@ -14,4 +14,4 @@ return res.send('oferta creada con exito')
 }
 }
 
-module.exports = GenreController;
+module.exports = ofertaController;

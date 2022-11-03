@@ -1,6 +1,6 @@
-var Book = require("../models/book");
-var Publisher = require("../models/publisher");
-var Genre = require("../models/genre");
+var gestor= require("../models/gestor");
+var oferta = require("../models/ofertaLaboral");
+var user= require("../models/User");
 
 class gestorController {
 
@@ -57,4 +57,4 @@ class gestorController {
 */
 }
 
-module.exports = BookController;
+module.exports = gestorController;

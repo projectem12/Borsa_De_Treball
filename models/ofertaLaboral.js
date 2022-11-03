@@ -21,4 +21,4 @@ const ofertaLaboralSchema = new mongoose.Schema({
 });
 
 // Export model.
-module.exports = mongoose.model("Book", BookSchema);    // Creo el model esquema per a poder-lo utilitzar
+module.exports = mongoose.model("oferta", ofertaSchema);    // Creo el model esquema per a poder-lo utilitzar
