@@ -37,8 +37,8 @@ const server = app.listen(port, () => {
 
 
 app.use('/home', borsaRouter );
-app.use('/genres',empresaRouter);
-app.use('/router', userRouter);
+app.use('/empresa',empresaRouter);
+app.use('/User', userRouter);
 
 
 
