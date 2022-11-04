@@ -1,6 +1,8 @@
+
 var GestorModel = require("../models/gestor");
 var OfertaLaboral = require("../models/ofertaLaboral");
 var UserModel = require("../models/User");
+
 
 class userController {
 
