@@ -17,4 +17,4 @@ const gestorSchema = new Schema({
 })
 
 // Export model.
-module.exports = mongoose.model("Book", BookSchema);    // Creo el model esquema per a poder-lo utilitzar
+module.exports = mongoose.model("gestor", gestorSchema);    // Creo el model esquema per a poder-lo utilitzar
