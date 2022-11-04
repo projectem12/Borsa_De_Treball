@@ -123,6 +123,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
@@ -136,5 +137,6 @@
   "bugs": {
     "url": "https://github.com/projectem12/Borsa_De_Treball/issues"
   },
+  
   "homepage": "https://github.com/projectem12/Borsa_De_Treball#readme"
 }
