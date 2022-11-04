@@ -1,15 +1,14 @@
 var express = require("express");
-var userRouter = express.Router();
+var router = express.Router();
+const ofertaController = require("../controllers/ofertaController");
 
-userRouter.get('/', (req, res)=>{
+router.get('/', (req, res)=>{
  
 })
-userRouter.post('/registerOferta', gestor.ofertaRegisterController) 
-userRouter.post('/profile')
-userRouter.patch('/update-data')  
-userRouter.patch('/update-email')
-userRouter.patch('/update-password')
-userRouter.delete('/unregister')
+router.post('/registerOferta', ofertaController.ofertaRegisterController) 
+router.post('/profile')
+router.patch('/update-data')  
+router.delete('/unregister')
 
 
 module.exports = router;
